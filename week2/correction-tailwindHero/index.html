@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="intro.css" /> -->
+    <!-- Import the Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Here be JavaScript! We can configure Tailwind to include project-specific content like palettes and fonts -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#c85643',
+              secondary: '#eaa194',
+              accent: '#eb654e',
+              text: '#0f0908',
+              'logo-text': '#4a3866',
+              background: '#fbf6f5',
+              'font-heading':
+                'Trebuchet MS, Lucida Sans Unicode, Lucida Grande, Lucida Sans, Arial, sans-serif',
+            },
+            screens: {
+              xs: '475px',
+            },
+          },
+        },
+      };
+    </script>
+    <title>Getting started with Tailwind CSS</title>
+  </head>
+  <body>
+    <main>
+      <section
+        class="bg-[url('https://picsum.photos/1500/900')] bg-cover bg-fixed bg-center h-[40vh] xs:h-[45vh] sm:h-[50vh] md:h-[55vh] lg:h-[60vh] flex flex-col justify-center"
+      >
+        <div
+          class="bg-gradient-to-b from-white h-full w-full flex flex-col justify-center py-2 px-4 xs:block xs:w-fit xs:h-auto xs:mx-auto xs:rounded"
+        >
+          <!-- Because of Tailwind's CSS resets, we have to add some properties like `font-bold` and `leading-relaxed` that got normalized -->
+          <h1
+            class="max-w-[25ch] mx-auto p-2 text-center text-logo-text font-bold text-xl xs:text-2xl sm:text-4xl md:text-5xl xl:text-6xl !leading-relaxed"
+          >
+            The most real website with the most fake content
+          </h1>
+          <div class="flex justify-center flex-wrap gap-x-4 md:gap-8">
+            <button
+              class="block m-2 mt-6 rounded py-2 px-4 text-background bg-text cursor-pointer transition-all ease-in-out hover:bg-logo-text md:font-light md:text-xl xl:text-2xl"
+            >
+              Find more
+            </button>
+            <button
+              class="block m-2 mt-6 rounded py-2 px-4 text-background bg-primary cursor-pointer transition-all ease-in-out hover:bg-accent md:font-light md:text-xl xl:text-2xl"
+            >
+              Find more, but on the right
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Former markup -->
+    <!-- <main>
+      <section class="hero">
+        <div class="hero_text_wrapper">
+          <h1 class="hero_heading">
+            The most real website with the most fake content
+          </h1>
+          <div class="hero_btn_wrapper">
+            <button class="hero_btn darker">Find more</button>
+            <button class="hero_btn">Find more, but on the right</button>
+          </div>
+        </div>
+      </section>
+    </main> -->
+  </body>
+</html>
