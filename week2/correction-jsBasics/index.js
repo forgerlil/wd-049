@@ -143,4 +143,8 @@ Make a forEach loop and, at each turn, display the value in the console.
 
 const myArrayForEach = ['one', 'two', 'three'];
 
+myArrayForEach.forEach(function (element) {
+  console.log(element);
+});
+
 myArrayForEach.forEach((element) => console.log(element));
