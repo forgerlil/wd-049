@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: sans-serif;
+        background: #007398;
+        color: white;
+        padding: 0 30px;
+      }
+
+      .block {
+        background: white;
+        border-radius: 3px;
+        padding: 20px;
+        color: black;
+        margin: 20px;
+        width: 100%;
+      }
+
+      .linkWrapper,
+      .results {
+        text-align: center;
+      }
+
+      li {
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 10px;
+        text-align: left;
+      }
+
+      a {
+        color: cornflowerblue;
+        text-decoration: none;
+        font-weight: bold;
+        border: 2px solid cornflowerblue;
+        padding: 5px 10px;
+        margin: 20px;
+        display: inline-block;
+        border-radius: 3px;
+      }
+
+      hr {
+        margin: 2rem 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">
+      <h1>Local Storage crash course</h1>
+      Check out your local storage in the Application tab of the browser's
+      console (Or the Storage tab if you're on Firefox)!
+      <br />
+      <br />
+      The Web Storage API allows you to save {key: value} pairs in your
+      browser's cache. Local Storage data persists after the leaving the website
+      (it is bound to the url, so whenever you return to the same url your
+      localStorage will load up all data again). It is a property of your Window
+      global object, like the document.
+      <br />
+      <br />
+      For this exercise you'll have to:
+      <ol>
+        <li>Add items to localStorage with the "Store me" button</li>
+        <li>
+          Remove one specific item from localStorage with the "Clear One" button
+        </li>
+        <li>Show all items in localStorage with the "Show Storage" button</li>
+        <li>Clear localStorage with the "Clear All" button</li>
+      </ol>
+    </div>
+    <div class="block results">
+      <form>
+        <input class="key" name="key" placeholder="Key name" />
+        <input class="value" name="value" placeholder="Value of key" />
+        <button class="store">Store me!</button>
+      </form>
+      <hr />
+
+      <form>
+        <input class="remove" name="value" placeholder="Key to remove" />
+        <button class="clearOne">Clear one key!</button>
+      </form>
+      <hr />
+
+      <button class="show">Show storage!</button>
+      <button class="clearAll">Clear all storage!</button>
+      <hr />
+      Display the data from Local Storage here
+    </div>
+    <button id="addToDo">Add todo</button>
+    <script src="index.js"></script>
+  </body>
+</html>

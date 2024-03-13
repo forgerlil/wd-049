@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Groceries",
+    "done": false
+  },
+  {
+    "name": "Cutting hair",
+    "done": true
+  },
+  {
+    "name": "Buy eggs",
+    "done": false
+  }
+]
