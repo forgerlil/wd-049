@@ -6,7 +6,7 @@ Click to scroll down to the relevant week 👇
 
 - [Week 1 - UI/UX](#week-1---uiux)
 - [Week 2 - CSS Frameworks & JS Basics](#week-2---css-frameworks--js-basics)
-- Week 3 - DOM Manipulation & OOP
+- [Week 3 - DOM Manipulation, Modules & OOP](#week-3---dom-manipulation-modules--oop)
 - Week 4 - React Intro, useState & useEffect
 - Week 5 - APIs + Fetch & Scrum
 - Week 6 - React Router & Martech
@@ -21,3 +21,6 @@ Click to scroll down to the relevant week 👇
 
 ## Week 2 - CSS Frameworks & JS Basics
 ![image](https://github.com/forgerlil/wd-049/assets/81853712/760d92c9-4533-424c-805c-a190cd68a59d)
+
+## Week 3 - DOM Manipulation, Modules & OOP
+![image](https://github.com/forgerlil/wd-049/assets/81853712/4a43081b-74f8-4be9-abe0-796c226bde1a)
