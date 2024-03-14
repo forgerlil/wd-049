@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: sans-serif;
+        background: #007398;
+        color: white;
+        padding: 0 30px;
+      }
+
+      .block {
+        text-align: center;
+        background: white;
+        border-radius: 3px;
+        padding: 20px;
+        color: black;
+        margin: 20px;
+        width: 100%;
+        max-width: 900px;
+      }
+
+      .goal {
+        background-color: #e0e0e0;
+        padding: 10px;
+        border-radius: 3px;
+      }
+
+      ul li {
+        padding: 10px;
+        text-align: left;
+      }
+
+      h4 {
+        display: inline-block;
+      }
+
+      a {
+        color: cornflowerblue;
+        text-decoration: none;
+        font-weight: bold;
+        border: 2px solid cornflowerblue;
+        padding: 5px 10px;
+        margin: 20px;
+        display: inline-block;
+        border-radius: 3px;
+      }
+
+      .inputs-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        margin: 1rem 0;
+      }
+
+      input {
+        padding: 0.3rem;
+        width: 50%;
+      }
+
+      textarea {
+        resize: none;
+        width: 50%;
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      button {
+        background: #007398;
+        color: white;
+        font-weight: bold;
+        padding: 10px 10px;
+        margin: 20px 20px;
+        cursor: pointer;
+        border: 1px solid #007398;
+        border-radius: 5px;
+      }
+
+      #allDiaryEntries {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+      }
+
+      .diaryEntry {
+        background: #007398;
+        color: white;
+        border-radius: 10px;
+        max-width: 300px;
+        padding: 0.5rem 1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .diaryEntry p {
+        overflow-wrap: break-word;
+      }
+      .diaryEntry p:first-child {
+        text-align: right;
+        margin: 0;
+      }
+
+      .diaryEntry p:not(:first-child) {
+        line-height: 1.6;
+      }
+
+      .diaryEntry h3 {
+        margin: 0.5em;
+      }
+
+      .diaryEntry i {
+        display: block;
+        background-color: white;
+        color: #007398;
+        text-decoration: bold;
+        margin-top: 0.5em;
+        border-radius: 5px;
+        padding: 0.5em 1em;
+      }
+    </style>
+    <title>Static Template</title>
+  </head>
+  <body>
+    <!-- You can collapse this instructions div to be able to focus on the exercise content! -->
+    <div id="instructions" class="block">
+      <div class="goal">
+        <h1>ES6 Modules: The diary</h1>
+        <p>
+          In its early days, Javascript programs were pretty small. Over time,
+          splitting code into separate files became a necessity. Since 2015, ES6
+          has introduced modules natively to JavaScript.
+        </p>
+        <b>Your goal</b>: Display and create diary entries while splitting code
+        with modules.
+      </div>
+      <details>
+        <summary><h4>Level 1/2: Displaying Entries</h4></summary>
+        <ul>
+          <li>
+            You will have 3 JS files for this exercise:
+            <ul>
+              <li>
+                <b>index.js</b> is your main module. It should
+                <i>only</i> select elements from the DOM and set event listeners
+              </li>
+              <li>
+                <b>diaryFns.js</b> is where all the functions for your project
+                will be <i>described</i>, and <i>exported</i>.
+              </li>
+              <li><b>data.js</b> will contain data to be read.</li>
+            </ul>
+          </li>
+          <li>
+            <b>data.js</b> is already provided, with a few additional diary
+            entries. Analyze the structure of the data you were given.
+          </li>
+          <li>
+            Create <b>index.js</b>, and add it to your HTML as a module. It
+            should select the section with the id of <b>allDiaryEntries</b>.
+          </li>
+          <li>
+            Create <b>diaryFns.js</b>, and inside:
+            <ul>
+              <li>Import the variable from <b>data.js</b></li>
+              <li>
+                Create a function that will loop over that data, create all
+                needed elements for a new diary entry, and add the contents of
+                each object in the array in the appropriate elements.
+              </li>
+              <li>
+                If unsure, have a look at the markup in index.html to see what
+                kind of elements and properties you need for each diary entry
+                card!
+              </li>
+              <li>
+                As the section where your new entry will be added is selected in
+                another file, think about how you can send a reference of that
+                node to the function you created in dairyFns.js (<b>without</b>
+                selecting the element in diaryFns.js!)
+              </li>
+              <li>
+                Export this function, as a named export, from
+                <b>diaryFns.js</b>, then import and call it in
+                <b>index.js</b>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary><h4>Level 2/2: Adding new Entries</h4></summary>
+        <ul>
+          <li>
+            In <b>diaryFns.js</b>, create and export (as a named export) a
+            function that:
+            <ul>
+              <li>
+                Creates elements for a new diary entry based on the content of
+                the inputs in the form, and adds it to the section selected in
+                <b>index.js</b>
+              </li>
+              <li>
+                ⚠️Existing elements <b>should not</b> be selected in
+                <b>diaryFns.js</b>⚠️ index.js should call your exported
+                function, and pass all nodes to that function!
+              </li>
+            </ul>
+          </li>
+          <li>
+            In <b>index.js</b>, import the above function from
+            <b>diaryFns.js</b>, and add it to an event listener that will
+            trigger upon submit of the form. Remember to reset the form as well!
+          </li>
+        </ul>
+      </details>
+      <div className="buttons">
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
+        >
+          JS Modules
+        </a>
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#applying_the_module_to_your_html"
+        >
+          Adding modules
+        </a>
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export"
+        >
+          Export statements
+        </a>
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"
+        >
+          Import statements
+        </a>
+      </div>
+    </div>
+    <form class="block">
+      <fieldset>
+        <legend>A coding exercise a day keeps the bugs away!</legend>
+        <div class="inputs-wrapper">
+          <label for="title">Today's title</label>
+          <input placeholder="Entry title" id="title" name="title" />
+        </div>
+        <div class="inputs-wrapper">
+          <label for="description">How was today?</label>
+          <textarea
+            placeholder="Describe today"
+            id="description"
+            rows="5"
+            maxlength="200"
+            name="description"
+          ></textarea>
+        </div>
+        <div class="inputs-wrapper">
+          <label for="whatsNext">What's next?</label>
+          <input
+            placeholder="Main note for tomorrow"
+            id="whatsNext"
+            name="whatsNext"
+          />
+        </div>
+        <button>Add entry!</button>
+      </fieldset>
+    </form>
+    <section id="allDiaryEntries" class="block">
+      <div class="diaryEntry">
+        <p>31/07/2023</p>
+        <h3>First official day!</h3>
+        <p>
+          Today I started my first day in the bootcamp! Hurray! The primer was
+          nice and we learned lots of things, and I got to meet my instructor
+          too. I still feel a bit shaky about Git, and I'll probably busy myself
+          with it tonight
+        </p>
+        <i>Got to keep practicing some Git!</i>
+      </div>
+    </section>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>

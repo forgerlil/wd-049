@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <style>body {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      font-family: sans-serif;
+      background: #007398;
+      color: white;
+      padding: 0 30px;
+    }
+    
+    .block {
+      text-align: center;
+      background: white;
+      border-radius: 3px;
+      padding: 20px;
+      color: black;
+      margin: 20px;
+      width: 100%;
+      max-width: 900px;
+    }
+    
+    .goal {
+      background-color: #e0e0e0;
+      padding: 10px;
+      border-radius: 3px;
+    }
+    
+    ul li {
+      padding: 10px;
+      text-align: left;
+    }
+    
+    h4 {
+      display: inline-block;
+    }
+    
+    a {
+      color: cornflowerblue;
+      text-decoration: none;
+      font-weight: bold;
+      border: 2px solid cornflowerblue;
+      padding: 5px 10px;
+      margin: 20px;
+      display: inline-block;
+      border-radius: 3px;
+    }
+    
+    .inputs-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1em;
+      margin: 1rem 0;
+    }
+    
+    input {
+      padding: 0.3rem;
+      width: 50%;
+    }
+    
+    textarea {
+      resize: none;
+      width: 50%;
+      margin: 0;
+      font-family: sans-serif;
+    }
+    
+    button {
+      background: #007398;
+      color: white;
+      font-weight: bold;
+      padding: 10px 10px;
+      margin: 20px 20px;
+      cursor: pointer;
+      border: 1px solid #007398;
+      border-radius: 5px;
+    }
+    
+    #allDiaryEntries {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+    
+    .diaryEntry {
+      background: #007398;
+      color: white;
+      border-radius: 10px;
+      max-width: 300px;
+      padding: 0.5rem 1rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .diaryEntry p {
+      overflow-wrap: break-word;
+    }
+    .diaryEntry p:first-child {
+      text-align: right;
+      margin: 0;
+    }
+    
+    .diaryEntry p:not(:first-child) {
+      line-height: 1.6;
+    }
+    
+    .diaryEntry h3 {
+      margin: 0.5em;
+    }
+    
+    .diaryEntry i {
+      display: block;
+      background-color: white;
+      color: #007398;
+      text-decoration: bold;
+      margin-top: 0.5em;
+      border-radius: 5px;
+      padding: 0.5em 1em;
+    }
+    </style>
+    <title>Static Template</title>
+  </head>
+  <body>
+    <!-- You can collapse this instructions div to be able to focus on the exercise content! -->
+    <div id="instructions" class="block">
+      <div class="goal">
+        <h1>ES6 Modules: Basics</h1>
+        <p>
+          In its early days, Javascript programs were pretty small. Over time,
+          splitting code into separate files became a necessity. Since 2015, ES6
+          has introduced modules natively to JavaScript.
+        </p>
+        <b>Your goal</b>: Split code into different files with modules.
+      </div>
+
+        <ul>
+          <li>
+            You will need 3 JS files for this exercise:
+            <ol>
+              <li>
+                <b>index.js</b> is your main module. It should only log or call structures imported from other files. Create it, and add it to your HTML file as a module. 
+              </li>
+              <li>
+                <b>myChoices.js</b> is where you'll store values about yourself. Create the file. It can stay blank for now.
+              </li>
+              <li>
+                <b>computerChoices.js</b> contains a helper function. It has already been provided to you.
+              </li>
+            </ol>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            In <b>myChoices.js</b>:
+            <ol>
+              <li>
+                Create a variable containing your favorite quote as a string. Export it by
+                <b>default</b>. In <b>index.js</b>, import it and log it.
+              </li>
+              <li>
+                Create an object to represent your favorite movie or book.
+                Export it as a <b>named export</b>. In <b>index.js</b>, import
+                it and log it.
+              </li>
+              <li>
+                Create a function to play Odds and Evens. It should accept three arguments: two
+                numbers and a string with your choice for <i>"odd"</i> or <i>"even"</i>, and return a message 
+                declaring the result. Export it as a <b>named export</b>.
+              </li>
+            </ol>
+          </li>
+          <li>
+            In <b>computerChoices.js</b>:
+            <ol>
+              <li>
+                You were given a function that generates a random number. As a <b>named export</b>, export it in a different way then what you used so far.
+              </li>
+            </ol>
+          </li>
+          <li>
+            In <b>index.js</b>:
+            <ol>
+              <li>
+                Import the function from <b>computerChoices.js</b>. Try to use a different syntax for importing!
+              </li>
+              <li>
+                Import your function from <b>myChoices.js</b>. Call it with a number generated from the function from 
+                <b>computerChoices.js</b> for the first parameter, your choice between 0 and 5 as the second parameter,
+                and your choice of <i>"odd"</i> or <i>"even"</i> as the third parameter.
+              </li>
+            </ol>
+          </li>
+        </ul>
+      </details>
+      <div className="buttons">
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules"
+        >
+          JS Modules
+        </a>
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules#applying_the_module_to_your_html"
+        >
+          Adding modules
+        </a>
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export"
+        >
+          Export statements
+        </a>
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export#using_named_exports"
+        >
+          Named exports
+        </a>
+        <a
+          className="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import"
+        >
+          Import statements
+        </a>
+      </div>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
