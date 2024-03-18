@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html data-theme="dark" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ducks in a pond</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="bg-info-content">
+      <div class="navbar justify-between max-w-[1280px] mx-auto">
+        <div>
+          <img
+            src="https://img.freepik.com/premium-vector/cute-cartoon-rubber-duck-vector-illustration_773815-129.jpg?w=740"
+            alt="rubber duck"
+            class="mask mask-squircle w-16 ml-4 my-2"
+          />
+        </div>
+        <form class="form-control">
+          <label class="input-group">
+            <span>🔍</span>
+            <input type="text" placeholder="Duck name" class="input" />
+          </label>
+        </form>
+        <nav>
+          <ul class="flex gap-6 pr-10 justify-end text-lg font-semibold">
+            <li class="hover:cursor-pointer">Home</li>
+            <li class="hover:cursor-pointer">Add new Duck</li>
+            <li class="hover:cursor-pointer">Login</li>
+            <li class="hover:cursor-pointer">Register</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="hero" class="hero min-h-[75vh] bg-base-300">
+      <div class="hero-content flex-col lg:flex-row lg:gap-12">
+        <img
+          src="https://img.cdn-pictorem.com/uploads/collection/O/OA8RCH8DHG/900_2111187HighRes.jpg"
+          class="rounded-lg max-w-sm lg:max-w-none lg:w-1/2"
+        />
+        <div
+          class="text-center lg:text-start flex flex-col lg:justify-center items-center lg:items-start"
+        >
+          <h1 class="text-5xl font-bold">Pondful of Ducks</h1>
+          <p class="py-6 max-w-[70ch] text-lg">
+            Here you have a selection of duck friends to help you <i>pond</i>er
+            about your coding doubts and questions. May you find the debugging
+            friend you need.
+          </p>
+          <button class="btn btn-success w-fit text-lg">Get Started</button>
+        </div>
+      </div>
+    </section>
+    <section id="ducks">
+      <h2 class="text-3xl text-center my-16 mb-10">
+        <span role="img" aria-label="two ducks in a row"> 🦆🦆 </span>
+        Our duck selection
+        <span role="img" aria-label="two ducks in a row"> 🦆🦆 </span>
+      </h2>
+      <div id="duckCards" class="flex flex-wrap gap-4 justify-center p-10">
+        <div
+          class="card w-96 bg-gray-900 h-[32rem] hover:scale-[1.02] hover:cursor-pointer transition-all"
+        >
+          <figure class="h-[70%] overflow-hidden">
+            <img
+              src="https://m.media-amazon.com/images/I/51VXgNZFIoL._AC_SL1424_.jpg"
+              alt="A rubber duck"
+              class="object-cover"
+            />
+          </figure>
+          <div class="card-body gap-6 text-center">
+            <h2 class="card-title">
+              My name is Mr. Quackers! Do you need my help with debugging?
+            </h2>
+            <p>I am one of Lilian Forger's trust confidantes.</p>
+          </div>
+        </div>
+        <div
+          class="card w-96 bg-gray-900 h-[32rem] hover:scale-[1.02] hover:cursor-pointer transition-all"
+        >
+          <figure class="h-[70%] overflow-hidden">
+            <img
+              src="https://m.media-amazon.com/images/I/51B1yl6SOkL._SL1000_.jpg"
+              alt="HRM The queen, as a rubber duck"
+              class="object-cover"
+            />
+          </figure>
+          <div class="card-body gap-6 text-center">
+            <h2 class="card-title">
+              I am HRM The Queen. Tell me of your struggles, peasant.
+            </h2>
+            <p>I am my own trusty confidante.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="w-full bg-base-300 h-screen mt-[-1px] overflow-hidden flex flex-col items-center justify-center"
+    >
+      <div
+        class="mt-4 mb-8 p-4 bg-neutral rounded flex flex-col items-center transition-all duration-300"
+      >
+        <h2 class="mb-4 text-2xl font-semibold">Hello there!</h2>
+        <p class="mb-1 font-thin text-lg text-center">
+          I am Mr. Quack, and I will assist you with your debugging for this
+          session.
+          <br />
+          Please explain me your code in an engaging manner, and it&apos;s ok to
+          get passionate.
+        </p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4">
+        <div
+          class="p-12 pb-8 bg-neutral rounded flex flex-col items-center transition-all duration-300"
+        >
+          <img
+            class="w-80 h-80 object-cover rounded"
+            src="https://m.media-amazon.com/images/I/51VXgNZFIoL._AC_SL1424_.jpg"
+            alt="duck"
+          />
+          <p class="mt-8 text-xl font-thin">Whenever you are ready!</p>
+        </div>
+      </div>
+      <div class="flex">
+        <button
+          class="btn btn-accent rounded mx-12 p-2 mt-8 transition-all duration-300 justify-self-end"
+        >
+          I need a break! Help me relax.
+        </button>
+      </div>
+    </section>
+    <footer
+      class="footer footer-center p-4 bg-info-content text-base-content text-lg"
+    >
+      <aside>
+        <p>2023 © The Rubber Duck Coalition</p>
+      </aside>
+    </footer>
+  </body>
+</html>
