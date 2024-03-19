@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import exampleOutcome from './exampleOutcome.png';
+import exampleOutcome from './exampleOutcome.gif';
+import exampleOutcome2 from './exampleOutcome2.gif';
+import exampleOutcome3 from './exampleOutcome3.gif';
 
 const ExampleOutcome = () => {
   const [showExample, setShowExample] = useState(false);
@@ -13,16 +15,10 @@ const ExampleOutcome = () => {
         {showExample ? 'Hide Example' : 'See example outcome'}
       </button>
       {showExample && (
-        <div>
-          <img
-            className='exampleImg'
-            src={exampleOutcome}
-            alt='Example outcome'
-          />
-          <p>
-            The output is exactly the same! But your code is now more scalable
-            and easier to handle and read!
-          </p>
+        <div className='imgWrapper'>
+          <img src={exampleOutcome} alt='Example outcome' />
+          <img src={exampleOutcome2} alt='Example outcome 2' />
+          <img src={exampleOutcome3} alt='Example outcome 3' />
         </div>
       )}
     </div>
