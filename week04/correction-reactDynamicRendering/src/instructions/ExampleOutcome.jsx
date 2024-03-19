@@ -6,23 +6,16 @@ const ExampleOutcome = () => {
 
   return (
     <div>
-      <button
-        className='example'
-        onClick={() => setShowExample((prev) => !prev)}
-      >
+      <button onClick={() => setShowExample((prev) => !prev)}>
         {showExample ? 'Hide Example' : 'See example outcome'}
       </button>
       {showExample && (
-        <div>
+        <div className='imgWrapper'>
           <img
             className='exampleImg'
             src={exampleOutcome}
             alt='Example outcome'
           />
-          <p>
-            The output is exactly the same! But your code is now more scalable
-            and easier to handle and read!
-          </p>
         </div>
       )}
     </div>
