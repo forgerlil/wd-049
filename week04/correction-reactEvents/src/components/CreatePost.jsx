@@ -1,6 +1,13 @@
 const CreatePost = () => {
+  const handleSubmit = (e) => {
+    // In React, preventing the default of forms is particularly important, as it resets the app to its original state!
+    e.preventDefault();
+
+    alert('Form submitted!');
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input placeholder='UserName' name='username' />
       <textarea
         cols='50'

@@ -8,7 +8,17 @@ export default function App() {
     <>
       <Instructions />
       <div className='block buttons'>
-        <SuperButton />
+        <SuperButton
+          btnClick={() => alert('I was clicked!')}
+          text='I will take you to interesting places'
+          alertText='Heh... I lied :)'
+        />
+        {/* <SuperButton
+          btnClick={() => {
+            console.log('This is logging something instead');
+          }}
+        />
+        <SuperButton btnClick={() => prompt('Type in something here')} /> */}
       </div>
       <div className='block buttons'>
         <Search />

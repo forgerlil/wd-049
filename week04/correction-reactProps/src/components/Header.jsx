@@ -1,5 +1,5 @@
-const Header = () => {
-  return <p>{/*Display the title here*/}</p>;
+const Header = ({ title }) => {
+  return <p>{title}</p>;
 };
 
 export default Header;
