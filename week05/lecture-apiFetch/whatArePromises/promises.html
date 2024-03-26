@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Promises overview</h1>
+    <script>
+      'use strict';
+
+      // USING CALLBACKS
+      const innerFunction = () => {
+        console.log('Hello from the inner function');
+      };
+
+      const HigherOrderFunction = (callback) => {
+        callback();
+      };
+
+      // HigherOrderFunction(innerFunction);
+
+      // PROMISES
+      // The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+
+      const isThereTimeToGame = () =>
+        new Promise((resolve, reject) => {
+          Math.random() > 0.5
+            ? resolve({ allGood: 'There is still time for another quest :D' })
+            : reject({ error: 'You have to go to bed now :(' });
+        });
+
+      // isThereTimeToGame()
+      //   .then((success) =>
+      //     isThereTimeToGame().then((success) =>
+      //       isThereTimeToGame().then((success) =>
+      //         isThereTimeToGame().then((success) => {})
+      //       )
+      //     )
+      //   )
+      //   .catch((rejection) => console.warn(rejection));
+
+      // async function fnName () {}
+
+      const gamingTime = async () => {
+        try {
+          const canIGame = await isThereTimeToGame();
+          return canIGame;
+        } catch (exception) {
+          console.warn(exception);
+        }
+      };
+
+      let ducks;
+
+      // gamingTime().then((success) => console.log(success));
+
+      // FETCHING DATA WITH METHOD CHAINING
+      // fetch('https://duck-pond-server.cyclic.cloud/duck')
+      //   .then((httpResponse) => {
+      //     console.log(httpResponse);
+      //     if (!httpResponse.ok)
+      //       throw new Error(
+      //         `API responded with status of ${httpResponse.status}`
+      //       );
+      //     httpResponse.json();
+      //   })
+      //   .then((finalResult) => (ducks = finalResult))
+      //   .catch((error) => console.warn(error));
+
+      // FETCHING DATA WITH ASYNC/AWAIT
+      const myFetchFunctionWrapper = async () => {
+        try {
+          const httpResponse = await fetch(
+            'https://duck-pond-server.cyclic.cloud/duck'
+          );
+          console.log(httpResponse);
+
+          if (!httpResponse.ok) throw new Error(`Resource not found :(`);
+
+          const finalResult = await httpResponse.json();
+
+          console.log(finalResult);
+          ducks = finalResult;
+        } catch (error) {
+          alert(error);
+          setTimeout(() => (location.href = 'https://google.com'), 1500);
+        }
+      };
+
+      myFetchFunctionWrapper();
+    </script>
+  </body>
+</html>
