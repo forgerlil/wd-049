@@ -11,10 +11,7 @@ Click to scroll down to the relevant week 👇
 - [Week 5 - APIs + Fetch & Scrum](#week-5---apis--fetch--scrum)
 - [Week 6 - React Router & Martech](#week-6---react-router--martech)
 - [Week 7 - SQL](#week-7---sql)
-- Week 8 - Node & Express
-- Week 9 - Node + Postgresql & Middlewares
-- Week 10 - MongoDB & Mongoose
-- Week 11 - JWT and Authentication
+- [The most important part](#the-most-important-content-produced-in-this-entire-track)
 
 ## Week 1 - UI/UX
 ![image](https://github.com/forgerlil/wd-049/assets/81853712/0b9a11d2-bb3f-4f67-9fa3-3d8367cd611e)
@@ -36,3 +33,10 @@ Click to scroll down to the relevant week 👇
 
 ## Week 7 - SQL
 ![image](https://github.com/forgerlil/wd-049/assets/81853712/a36177fd-3fd2-4f42-b937-927cdfe5d830)
+- [One to Many (blank)](https://www.db-fiddle.com/f/9KDqCfMNBwMFeoq754z1iG/1)
+- [One to Many (final)](https://www.db-fiddle.com/f/gLyEhM5nk2JdGkZwmZ6sbP/9)
+- [Many to Many (blank)](https://www.db-fiddle.com/f/gLyEhM5nk2JdGkZwmZ6sbP/1)
+- [Many to Many (final)](https://www.db-fiddle.com/f/9KDqCfMNBwMFeoq754z1iG/5)
+
+# The most important content produced in this entire track:
+![memefied-Drake_Hotline_Bling](https://github.com/forgerlil/wd-049/assets/81853712/82a8e470-f65e-4254-974b-6b89514bbdc1)
