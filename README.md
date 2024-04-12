@@ -10,7 +10,7 @@ Click to scroll down to the relevant week 👇
 - [Week 4 - React Intro, useState & useEffect](#week-4---react-intro-usestate--useeffect)
 - [Week 5 - APIs + Fetch & Scrum](#week-5---apis--fetch--scrum)
 - [Week 6 - React Router & Martech](#week-6---react-router--martech)
-- Week 7 - SQL
+- [Week 7 - SQL](#week-7---sql)
 - Week 8 - Node & Express
 - Week 9 - Node + Postgresql & Middlewares
 - Week 10 - MongoDB & Mongoose
@@ -33,3 +33,6 @@ Click to scroll down to the relevant week 👇
 
 ## Week 6 - React Router & Martech
 ![image](https://github.com/forgerlil/wd-049/assets/81853712/a252804a-bd54-426a-b851-7422de8c6ce9)
+
+## Week 7 - SQL
+![image](https://github.com/forgerlil/wd-049/assets/81853712/a36177fd-3fd2-4f42-b937-927cdfe5d830)
